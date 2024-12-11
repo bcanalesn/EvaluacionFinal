@@ -1,0 +1,11 @@
+// build.gradle
+plugins {
+    alias(libs.plugins.android.application) apply false
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+}
+
+allprojects {
+    // No es necesario declarar repositorios aquí si ya están en settings.gradle
+}
+
+apply plugin: 'com.google.gms.google-services'

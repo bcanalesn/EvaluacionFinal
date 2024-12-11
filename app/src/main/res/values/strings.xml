@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Evaluación Final</string>
+    <string name="mensaje_recibido">Mensaje recibido:</string> <!-- Agrega esta línea -->
+    <string name="load_from_firebase">Cargar desde Firebase</string>
+    <string name="send_message">Enviar Mensaje</string>
+</resources>
+

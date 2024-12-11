@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // Asegúrate de que esta línea esté presente
+}
+
+android {
+    namespace 'com.santotomas.evaluacionfinal'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.santotomas.evaluacionfinal"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5' // Dependencia de MQTT
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth:21.0.10' // Autenticación (si se necesita)
+    implementation 'com.google.firebase:firebase-database:20.1.0' // Base de datos en tiempo real
+    implementation 'com.google.firebase:firebase-firestore:24.1.0' // Si necesitas Firestore
+    implementation 'com.google.firebase:firebase-analytics:21.0.0' // Analítica (opcional)
+    implementation 'com.google.firebase:firebase-messaging:23.0.0' // Mensajería (opcional)
+
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.google.firebase:firebase-auth:21.4.3'
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
